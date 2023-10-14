@@ -68,8 +68,8 @@ const OrderListItem = ({order}) => {
           borderTopColor: '#e3e3e3',
           paddingTop: 10,
         }}>
-         <Text style={{ fontWeight: '500', fontsize: 13, color: '#B22222' }}>Ajuda</Text> 
-        <Text style={{ fontWeight: '500', fontSize: 13, color: '#B22222'}}>Adicionar à sacola</Text>
+         <Text style={{ fontWeight: '500', fontSize: 13, color: '#B22222' }}>Help</Text> 
+        <Text style={{ fontWeight: '500', fontSize: 13, color: '#B22222'}}>Add to bag</Text>
       </View>
     </Pressable>
   )

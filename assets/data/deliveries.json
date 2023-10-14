@@ -1,0 +1,26 @@
+[
+    {
+        "driver_id" : 1,
+        "customer_id":1,
+        "lat": 46.87190499528364,
+        "lng": 28.54937769418778,
+        "address":"",
+        "deliveryDone":""
+    },
+    {
+        "driver_id" : 1,
+        "customer_id":2,
+        "lat": 46.87190499528364,
+        "lng": 28.54937769418778,
+        "address":"",
+        "deliveryDone":""
+    },
+    {
+        "driver_id" : 1,
+        "customer_id":2,
+        "lat": 46.87190499528364,
+        "lng": 28.54937769418778,
+        "address":"",
+        "deliveryDone":""
+    }
+]

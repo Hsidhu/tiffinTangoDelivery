@@ -9,41 +9,51 @@ import BasketScreen from '../screens/BasketScreen';
 import OrdersScreen from '../screens/OrdersScreen';
 import OrderDetailsScreen from '../screens/OrderDetailsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import DeliveryProofScreen from '../screens/DeliveryProofScreen';
+import MapScreen from '../screens/MapScreen';
 
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
-return (
-    <Stack.Navigator 
-        initialRouteName='Home' 
-        screenOptions={{ 
-            headerShown: 'false',
-        }}
-    >
-        <Stack.Screen 
-            name="Delivery" 
-            component={TabNavigation}
-            options={{
-                headerShown: false
+    return (
+        <Stack.Navigator 
+            initialRouteName='Home' 
+            screenOptions={{ 
+                headerShown: 'false',
             }}
-        />
-        <Stack.Screen 
-            name="Dish" 
-            component={DishDetailsScreen} 
-        />
-        <Stack.Screen 
-            name="Basket" 
-            component={BasketScreen} 
-        />
-        <Stack.Screen 
-            name="Orders" 
-            component={OrdersScreen} 
-        />
-        <Stack.Screen 
-            name="OrderDetails" 
-            component={OrderDetailsScreen} 
-        />
-    </Stack.Navigator>
+        >
+            <Stack.Screen
+                name="TabNavigation" 
+                component={TabNavigation}
+                options={{
+                    headerShown: false
+                }}
+            />
+            <Stack.Screen 
+                name="Dish" 
+                component={DishDetailsScreen} 
+            />
+            <Stack.Screen 
+                name="Basket" 
+                component={BasketScreen} 
+            />
+            <Stack.Screen 
+                name="Orders" 
+                component={OrdersScreen} 
+            />
+            <Stack.Screen 
+                name="OrderDetails" 
+                component={OrderDetailsScreen} 
+            />
+            <Stack.Screen 
+                name="DeliveryProofScreen" 
+                component={DeliveryProofScreen} 
+            />
+            <Stack.Screen 
+                name="MapScreen"
+                component={MapScreen} 
+            />
+        </Stack.Navigator>
     );
 }
 
@@ -63,7 +73,7 @@ const TabNavigation = () => {
                 name="Home"
                 component={HomeStackScreen}
                 options={{
-                    tabBarLabel: 'Início',
+                    tabBarLabel: 'Home',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home" color={color} size={24} />
                     ),
@@ -73,7 +83,7 @@ const TabNavigation = () => {
                 name="Orders"
                 component={OrdersScreen}
                 options={{
-                    tabBarLabel: 'Histórico',
+                    tabBarLabel: 'Orders',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="clipboard-list" color={color} size={24} />
                     ),
@@ -94,6 +104,16 @@ const TabNavigation = () => {
                 component={ProfileScreen}
                 options={{
                     tabBarLabel: 'Meu perfil',
+                    tabBarIcon: ({ color }) => (
+                        <MaterialCommunityIcons name="account" color={color} size={24} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="DeliveryProofScreen"
+                component={DeliveryProofScreen}
+                options={{
+                    tabBarLabel: 'DeliveryProofScreen',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="account" color={color} size={24} />
                     ),

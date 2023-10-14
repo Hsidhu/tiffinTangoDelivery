@@ -28,6 +28,20 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+        [
+            "expo-image-picker",
+            {
+              "cameraPermission": "The app needs access to your camera in order to take photos for delivery proof."
+            }
+        ],
+        [
+            "expo-location",
+            {
+              "locationAlwaysAndWhenInUsePermission": "Allow Delivery App to use your location."
+            }
+        ]
+    ]
   }
 }

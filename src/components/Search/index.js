@@ -28,7 +28,7 @@ export default function index({onPress}) {
                 color: 'grey',
                 marginLeft: 10,
             }}
-        >O que você procura?</Text>
+        >Search</Text>
     </TouchableOpacity>
   )
 }

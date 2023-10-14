@@ -4,9 +4,12 @@ import restaurants from "../../../assets/data/restaurants.json";
 import BasketItem from "../../components/BasketItem";
 import { useNavigation } from "@react-navigation/native";
 
+
+import { connect } from 'react-redux';
+
 const restaurant = restaurants[0];
 
-const BasketScreen = () => {
+const BasketScreen = ({testReducer}) => {
   const [quantity, setQuantity] = useState(1);
 
   const onMinus = () => {
@@ -29,7 +32,7 @@ const BasketScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{restaurant.name}</Text>
+      <Text style={styles.title}>{restaurant.name} {testReducer}</Text>
 
       <Text style={styles.subtitle}>Seus pedidos</Text>
 
@@ -110,4 +113,22 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BasketScreen;
+
+const mapStateToProps = state => {
+    console.log(state)
+    return {
+        testReducer: state.testReducer,
+    };
+};
+  
+function mapDispatchToProps(dispatch) {
+    return {
+    };
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(BasketScreen);
+
+//export default  BasketScreen;

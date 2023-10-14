@@ -188,3 +188,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [Unity]: https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white
 
 [def]: https://example.com
+
+npx expo-doctor
+npm why expo-constants
+
+npm audit fix --force
+
+npx expo install --fix
+
+https://3985-99-234-248-49.ngrok-free.app/assets/media/uploads/ab_catering_logo.png
+
