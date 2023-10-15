@@ -74,20 +74,10 @@ Contributions are welcome! If you would like to contribute to this project, plea
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Contact
 
-![Josafá Marengo](https://img.shields.io/badge/-Linkedin-000000?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/josafamarengo/)
-![Josafá Marengo](https://img.shields.io/badge/-Email-000000?style=flat&logo=Gmail&logoColor=white&link=https://josafa.com.br/#contact)
-![Josafá Marengo](https://img.shields.io/badge/-Portfolio-000000?style=flat&logo=Google-Chrome&logoColor=white&link=https://josafa.com.br/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<div align="center">
-  <sub>Built with ❤︎ by <a href="https://josafa.com.br">Josafá Marengo</a>
-</div>
-
-
 
 
 
@@ -95,42 +85,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/josafamarengo/DeliveryApp__User?style=for-the-badge
 [contributors-url]: https://github.com/josafamarengo/DeliveryApp__User/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/josafamarengo/DeliveryApp__User?style=for-the-badge
-[forks-url]: https://github.com/josafamarengo/DeliveryApp__User/network/members
-[stars-shield]: https://img.shields.io/github/stars/josafamarengo/DeliveryApp__User?style=for-the-badge
-[stars-url]: https://github.com/josafamarengo/DeliveryApp__User/stargazers
 [issues-shield]: https://img.shields.io/github/issues/josafamarengo/DeliveryApp__User?style=for-the-badge
 [issues-url]: https://github.com/josafamarengo/DeliveryApp__User/issues
 [license-shield]: https://img.shields.io/github/license/josafamarengo/DeliveryApp__User?style=for-the-badge
 [license-url]: https://github.com/josafamarengo/DeliveryApp__User/blob/master/LICENSE.txt
-
-<!--===== SOCIAL =====-->
-[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
-[linkedin-url]: https://linkedin.com/in/josafamarengo
-
-[leetcode-shield]: https://img.shields.io/badge/-LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black
-[leetcode-url]: https://leetcode.com/josafamarengo/
-
-[codepen-shield]: https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white
-[codepen-url]: https://codepen.io/josafamarengo
-
-[hackerearth-shield]: https://img.shields.io/badge/HackerEarth-%232C3454.svg?&style=for-the-badge&logo=HackerEarth&logoColor=Blue
-[hackerearth-url]: https://www.hackerearth.com/@josafabmarengo
-
-[twitch-shield]: https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white
-[twitch-url]: https://www.twitch.tv/josafamarengo
-
-[youtube-shield]: https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white
-[youtube-url]: https://www.youtube.com/channel/UCraUQSH-tLy8jI1R_hzbTkg
-
-[Picpay-shield]: https://img.shields.io/badge/picpay-21C25E?style=for-the-badge&logo=picpay&logoColor=white
-[Picpay-url]: https://picpay.me/josafamarengo
-
-[Fiverr-shield]: https://img.shields.io/badge/fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white
-[Fiverr-url]: https://www.fiverr.com/josafmarengo?up_rollout=true
-
-[Upwork-shield]: https://img.shields.io/badge/UpWork-6FDA44?style=for-the-badge&logo=Upwork&logoColor=white
-[Upwork-url]: https://www.upwork.com/freelancers/~01cede7d02c9821506?viewMode=1
 
 
 <!--===== UTILITIES =====-->
