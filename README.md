@@ -9,13 +9,7 @@
   <p align="center">
     Joining efforts to bring happiness to your doorstep, with the dedicated and valued work of our delivery drivers
     <br>
-    <br>
-    <a href="https://josafamarengo.github.io/DeliveryApp__User/"><strong>Explore the docs »</strong></a>
-    <br>
-    <br>
-    <a href="https://github.com/josafamarengo/DeliveryApp__User/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/josafamarengo/DeliveryApp__User/issues">Request Feature</a>
+    
   </p>
 
 </div>
@@ -39,7 +33,7 @@
 
 ## About The Project
 
-This is a mobile application built using React Native for both iOS and Android platforms. The app is designed to provide users with a convenient and seamless way to order food from their favorite restaurants and have it delivered right to their doorstep. The app includes features such as <!-- user authentication,--> restaurant listings, menu browsing<!--, ordering, payment processing, and delivery tracking-->.
+This is a mobile application built using React Native for both iOS and Android platforms. The app is designed to provide users with a convenient and seamless way to order food from their favorite restaurants and have it delivered right to their doorstep. The app includes features
 
 
 ### Built With
@@ -52,8 +46,7 @@ This is a mobile application built using React Native for both iOS and Android p
 To run this app on your local machine, you need to have Node.js and the React Native CLI installed. Once you have these prerequisites set up, you can clone the repository, install the dependencies, and start the app using the following commands:
 
 ```bash
-# Clone the repo
-git clone https://github.com/josafamarengo/DeliveryApp__User.git
+
 
 # Go to directory
 cd DeliveryApp__User
@@ -69,13 +62,7 @@ This will start the app on your local development server and open it in your def
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Roadmap
 
-See the [open issues](https://github.com/josafamarengo/DeliveryApp__User/issues) for a list of proposed features (and known issues).
-
-- [ ] Add User Authentication 
-- [ ] Add Payment Processing
-- [ ] Add Delivery Tracking
 
 ## Contributing
 
