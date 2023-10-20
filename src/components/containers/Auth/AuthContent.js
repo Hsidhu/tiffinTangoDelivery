@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AuthContent from '../../ui/Auth/AuthContent';
-import {login, createUser} from '../../../store/Auth/actions'
+import {login, createUser, setAuthenticate} from '../../../store/Auth/actions'
 
 export default connect(
     ({ }) => ({ }),
