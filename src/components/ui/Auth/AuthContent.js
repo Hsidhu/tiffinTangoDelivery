@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Alert, StyleSheet, View } from 'react-native';
+import { Alert, StyleSheet, View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import AuthForm from './AuthForm';
@@ -8,7 +8,9 @@ import LoadingOverlay from '../LoadingOverlay'
 
 import { Colors } from '../../../constants/styles'
 
-const AuthContent = ({ isLogin, loginHandler, createUser, setAuthenticate }) => {
+import {login as loginHandler} from '../../../store/Auth/actions'
+
+const AuthContent = ({ isLogin, createUser, setAuthenticate, authToken, isAuthenticated }) => {
 
     const navigation = useNavigation();
 
@@ -70,6 +72,7 @@ const AuthContent = ({ isLogin, loginHandler, createUser, setAuthenticate }) => 
             const token = await loginHandler(email, password);
             setAuthenticate(token);
         } catch (error) {
+            console.log(error)
             Alert.alert(
               'Authentication failed!',
               'Could not log you in. Please check your credentials or try again later!'
@@ -93,7 +96,8 @@ const AuthContent = ({ isLogin, loginHandler, createUser, setAuthenticate }) => 
     }
     
     if (isAuthenticating) {
-        return <LoadingOverlay message={isLogin ? 'Creating user...' : 'Login...'} />
+        console.log(authToken, isAuthenticated)
+        return <LoadingOverlay message={isLogin ? 'Login...' : 'Creating user...'} />
     }
 
     return (
@@ -103,7 +107,7 @@ const AuthContent = ({ isLogin, loginHandler, createUser, setAuthenticate }) => 
                 onSubmit={submitHandler}
                 credentialsInvalid={credentialsInvalid}
             />
-            <View style={styles.buttons}>
+            <View style={styles.buttons}> 
                 <FlatButton onPress={switchAuthModeHandler}>
                     {isLogin ? 'Create a new user' : 'Log in instead'}
                 </FlatButton>

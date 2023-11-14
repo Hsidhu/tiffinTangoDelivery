@@ -13,7 +13,7 @@ export const authToken = (state = "", action) => {
     }
 }
 
-export const isAuthenticated = (state = true, action) => {
+export const isAuthenticated = (state = false, action) => {
     switch (action.type) {
         case SET_AUTH_FLAG: 
             return action.payload;

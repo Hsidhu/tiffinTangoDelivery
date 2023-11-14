@@ -7,7 +7,7 @@ const LoginScreen = () => {
 
     return (
         <View style={styles.container}>
-            <AuthContent isLogin />
+            <AuthContent isLogin={true} />
         </View>
     )
 }
