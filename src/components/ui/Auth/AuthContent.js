@@ -8,7 +8,7 @@ import LoadingOverlay from '../LoadingOverlay'
 
 import { Colors } from '../../../constants/styles'
 
-import {login as loginHandler} from '../../../store/Auth/actions'
+import { login as loginHandler } from '../../../store/Auth/actions'
 
 const AuthContent = ({ isLogin, createUser, setAuthenticate, authToken, isAuthenticated }) => {
 
@@ -31,19 +31,19 @@ const AuthContent = ({ isLogin, createUser, setAuthenticate, authToken, isAuthen
             navigation.replace('Login');
         }
     }
-    
+
     // validate newUser submit
     function submitHandler(credentials) {
         let { email, confirmEmail, password, confirmPassword } = credentials;
-    
+
         email = email.trim();
         password = password.trim();
-    
+
         const emailIsValid = email.includes('@');
         const passwordIsValid = password.length > 4;
         const emailsAreEqual = email === confirmEmail;
         const passwordsAreEqual = password === confirmPassword;
-    
+
         if (
             !emailIsValid ||
             !passwordIsValid ||
@@ -58,10 +58,10 @@ const AuthContent = ({ isLogin, createUser, setAuthenticate, authToken, isAuthen
             });
             return;
         }
-        if(isLogin){
+        if (isLogin) {
             triggerLoginActions(email, password);
         }
-        else{
+        else {
             triggerNewUserActions(email, password);
         }
     }
@@ -74,8 +74,8 @@ const AuthContent = ({ isLogin, createUser, setAuthenticate, authToken, isAuthen
         } catch (error) {
             console.log(error)
             Alert.alert(
-              'Authentication failed!',
-              'Could not log you in. Please check your credentials or try again later!'
+                'Authentication failed!',
+                'Could not log you in. Please check your credentials or try again later!'
             );
             setIsAuthenticating(false);
         }
@@ -86,15 +86,15 @@ const AuthContent = ({ isLogin, createUser, setAuthenticate, authToken, isAuthen
         try {
             const token = await createUser(email, password);
             setAuthenticate(token);
-          } catch (error) {
+        } catch (error) {
             Alert.alert(
-              'Authentication failed',
-              'Could not create user, please check your input and try again later.'
+                'Authentication failed',
+                'Could not create user, please check your input and try again later.'
             );
             setIsAuthenticating(false);
-          }
+        }
     }
-    
+
     if (isAuthenticating) {
         console.log(authToken, isAuthenticated)
         return <LoadingOverlay message={isLogin ? 'Login...' : 'Creating user...'} />
@@ -107,32 +107,32 @@ const AuthContent = ({ isLogin, createUser, setAuthenticate, authToken, isAuthen
                 onSubmit={submitHandler}
                 credentialsInvalid={credentialsInvalid}
             />
-            <View style={styles.buttons}> 
+            <View style={styles.buttons}>
                 <FlatButton onPress={switchAuthModeHandler}>
                     {isLogin ? 'Create a new user' : 'Log in instead'}
                 </FlatButton>
             </View>
         </View>
-      );
+    );
 }
 
 
 export default AuthContent;
 
 const styles = StyleSheet.create({
-  authContent: {
-    marginTop: 64,
-    marginHorizontal: 32,
-    padding: 16,
-    borderRadius: 8,
-    backgroundColor: Colors.primary800,
-    elevation: 2,
-    shadowColor: 'black',
-    shadowOffset: { width: 1, height: 1 },
-    shadowOpacity: 0.35,
-    shadowRadius: 4,
-  },
-  buttons: {
-    marginTop: 8,
-  },
+    authContent: {
+        marginTop: 64,
+        marginHorizontal: 32,
+        padding: 16,
+        borderRadius: 8,
+        backgroundColor: Colors.primary800,
+        elevation: 2,
+        shadowColor: 'black',
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity: 0.35,
+        shadowRadius: 4,
+    },
+    buttons: {
+        marginTop: 8,
+    },
 });

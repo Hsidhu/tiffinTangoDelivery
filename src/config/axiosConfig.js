@@ -11,15 +11,27 @@ export const config = {
     },
 };
 
-const authToken = AsyncStorage.getItem('userToken') ?? '';
-
 const axiosClient = axios.create();
 
 axiosClient.defaults.baseURL = config.HOST_URL;
 
 axiosClient.defaults.headers = config.headers;
 
-axiosClient.defaults.headers.Authorization = `Bearer ${authToken}`
+axiosClient.interceptors.request.use(
+    async (config) => {
+        const token = await AsyncStorage.getItem('userToken');
+        console.log("Retrieved token:", token); // Add this line to check the token
+
+        if (token) {
+            config.headers["Authorization"] = `Bearer ${token}`;
+        }
+        return config;
+    },
+    error => {
+        return Promise.reject(error);
+    }
+);
+
 
 export function getCustomRequest(URL) {
     return axios.get(`/${URL}`).then(response => response);
