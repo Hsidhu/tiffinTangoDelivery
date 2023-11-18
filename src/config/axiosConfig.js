@@ -41,8 +41,8 @@ export function getRequest(URL) {
     return axiosClient.get(`/${URL}`).then(response => response);
 }
 
-export function postRequest(URL, payload) {
-    return axiosClient.post(`/${URL}`, payload).then(response => response);
+export function postRequest(URL, payload, config ={}) {
+    return axiosClient.post(`/${URL}`, payload, config).then(response => response);
 }
 
 export function patchRequest(URL, payload) {

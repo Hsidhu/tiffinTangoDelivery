@@ -15,7 +15,7 @@ export const authToken = (state = "", action) => {
 
 export const isAuthenticated = (state = false, action) => {
     switch (action.type) {
-        case SET_AUTH_FLAG: 
+        case SET_AUTH_FLAG:
             return action.payload;
         default:
             return state;

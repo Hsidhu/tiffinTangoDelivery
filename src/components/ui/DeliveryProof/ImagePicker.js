@@ -15,6 +15,7 @@ const ImagePicker = ({onTakeImage}) => {
     const [cameraPermissionInformation, requestPermission] = useCameraPermissions();
   
     async function verifyPermissions() {
+        const permissionResponse = await requestPermission();
         if (cameraPermissionInformation.status === PermissionStatus.UNDETERMINED) {
             const permissionResponse = await requestPermission();
   
@@ -39,14 +40,13 @@ const ImagePicker = ({onTakeImage}) => {
           return;
         }
     
-        const image = await launchCameraAsync({
-          allowsEditing: true,
+        const images = await launchCameraAsync({
+          allowsEditing: false,
           aspect: [16, 9],
           quality: 0.5,
         });
-    
-        setPickedImage(image.uri);
-        onTakeImage(image.uri);
+        setPickedImage( images.assets[0].uri);
+        onTakeImage(images.assets[0]);
     }
 
     let imagePreview = <Text>No image taken yet.</Text>;
