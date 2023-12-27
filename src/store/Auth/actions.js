@@ -1,10 +1,11 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { postRequest, deleteRequest } from '../../config/axiosConfig';
+import { getRequest, postRequest, deleteRequest } from '../../config/axiosConfig';
 
 const API_KEY = 'AIzaSyBEqSY4vEjuJnO8zbX5Pb8PO3ln9czPQxk';
 
 export const AUTH_TOKEN = 'AUTH_TOKEN'
 export const SET_AUTH_FLAG = 'SET_AUTH_FLAG'
+export const USER_DETAILS = 'USER_DETAILS'
 
 async function loginHandler({ email, password }) {
     let token = (Math.random() + 1).toString(36).substring(7);
@@ -87,4 +88,14 @@ export const logout = () => (dispatch) => {
 }
 
 
+export const getUserDetails = () => (dispatch) => {
 
+    const response = getRequest('auth/user').then(response => {
+        dispatch({
+            type: USER_DETAILS,
+            payload: response.data
+        })
+    }).catch(error => {
+        console.log("error while logout")
+    });
+}

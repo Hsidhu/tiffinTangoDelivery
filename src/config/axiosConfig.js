@@ -1,10 +1,10 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-
 export const config = {
-    //HOST_URL: 'https://laravel-react-boilerplate.herokuapp.com/api',
-    HOST_URL: 'https://5e5f-99-234-248-49.ngrok-free.app/api',
+    // HOST_URL: 'https://laravel-react-boilerplate.herokuapp.com/api',
+     HOST_URL: 'https://c3a2-99-234-248-49.ngrok-free.app/api',
+    // HOST_URL: 'http://3.14.216.163/api',
     headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
@@ -20,7 +20,7 @@ axiosClient.defaults.headers = config.headers;
 axiosClient.interceptors.request.use(
     async (config) => {
         const token = await AsyncStorage.getItem('userToken');
-        console.log("Retrieved token:", token); // Add this line to check the token
+        console.log("Retrieved token from storage:", token); // Add this line to check the token
 
         if (token) {
             config.headers["Authorization"] = `Bearer ${token}`;

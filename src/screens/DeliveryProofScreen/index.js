@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 
-import ProofForm from '../../components/ui/DeliveryProof/ProofForm';
+import ProofForm from '../../components/containers/DeliveryProof/ProofForm';
 
 const DeliveryProofScreen = () => {
 

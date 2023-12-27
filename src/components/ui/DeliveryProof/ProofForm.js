@@ -8,7 +8,7 @@ import LocationPicker from './LocationPicker';
 import Button from '../Button';
 import { deliveryProofHandler } from "../../../store/Deliveries/actions"
 
-const ProofForm = ({}) => {
+const ProofForm = ({userDetails, dailyDeliveries}) => {
     const [comment, setComment] = useState('');
     const [selectedImage, setSelectedImage] = useState();
     const [pickedLocation, setPickedLocation] = useState();

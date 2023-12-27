@@ -1,8 +1,12 @@
-import { View, Text, Image } from "react-native";
 import React from "react";
+import { useSelector } from 'react-redux';
+import { View, Text, Image } from "react-native";
 import UserLocation from '../../utils/UserLocation'
 
 export default function ProfileScreen() {
+    
+    const {userDetails, dailyDeliveries} = useSelector(state => state)
+
     return (
         <View
             style={{
@@ -41,7 +45,7 @@ export default function ProfileScreen() {
                         marginHorizontal: "auto"
                     }}
                 >
-                    Joseph Marengo
+                    {userDetails.user.full_name}
                 </Text>
             </View>
 

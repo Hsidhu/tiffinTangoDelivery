@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -12,9 +14,20 @@ import ProfileScreen from '../screens/ProfileScreen';
 import DeliveryProofScreen from '../screens/DeliveryProofScreen';
 import MapScreen from '../screens/MapScreen';
 
+import { getUserDetails } from '../store/Auth/actions';
+import { getTodaysDeliveries } from '../store/Deliveries/actions';
+
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
+
+    const dispatcher = useDispatch();
+
+    useEffect(() => {
+        dispatcher(getUserDetails())
+        dispatcher(getTodaysDeliveries())
+    },[])
+
     return (
         <Stack.Navigator 
             initialRouteName='Home' 
