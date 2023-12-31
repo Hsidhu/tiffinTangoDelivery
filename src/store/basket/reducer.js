@@ -23,7 +23,7 @@ export const basket = (state = [], action) => {
 }
 
 
-export const testReducer = (state = "test", action) => {
+export const testReducer = (state = "TEst on orders", action) => {
     switch (action.type) {
         case BASKET_ADD_SUCCESS: 
             return state;

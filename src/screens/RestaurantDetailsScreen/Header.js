@@ -17,7 +17,7 @@ const Header = ({ restaurant }) => {
                 size={24} 
                 color="black"
             /> 
-            <Text style={styles.subtitle} > { restaurant.deliveryFee.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) }  •  { restaurant.minDeliveryTime } - { restaurant.maxDeliveryTime } min
+            <Text style={styles.subtitle} > { restaurant.deliveryFee.toLocaleString('en-US', {style: 'currency', currency: 'USA'}) }  •  { restaurant.minDeliveryTime } - { restaurant.maxDeliveryTime } min
             </Text>
             <View style={styles.ratingGroup}>
                 <MaterialIcons 
@@ -29,7 +29,7 @@ const Header = ({ restaurant }) => {
                  { restaurant.rating }</Text>
             </View>
         </View>
-        <Text style={styles.menuTitle}>Cardápio</Text>
+        <Text style={styles.menuTitle}>Menu</Text>
     </View>
   );
 }

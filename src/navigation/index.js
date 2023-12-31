@@ -106,7 +106,7 @@ const TabNavigation = () => {
                 name="Basket"
                 component={BasketScreen}
                 options={{
-                    tabBarLabel: 'Em andamento',
+                    tabBarLabel: 'In progress',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="basket" color={color} size={24} />
                     ),
@@ -116,7 +116,7 @@ const TabNavigation = () => {
                 name="Profile"
                 component={ProfileScreen}
                 options={{
-                    tabBarLabel: 'Meu perfil',
+                    tabBarLabel: 'My profile',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="account" color={color} size={24} />
                     ),
@@ -146,7 +146,7 @@ const HomeStackScreen = () => {
             }}
         >
             <HomeStack.Screen 
-                name="Início" 
+                name="Start" 
                 component={HomeScreen}
                 options={{
                     headerShown: false

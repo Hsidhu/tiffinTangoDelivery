@@ -53,7 +53,7 @@ export default function HomeScreen() {
           margin: 10,
         }}
       >
-        Lojas
+        Restaurants 
       </Text>
       <FlatList
         data={restaurants}

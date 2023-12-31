@@ -34,7 +34,7 @@ const BasketScreen = ({testReducer}) => {
     <View style={styles.container}>
       <Text style={styles.title}>{restaurant.name} {testReducer}</Text>
 
-      <Text style={styles.subtitle}>Seus pedidos</Text>
+      <Text style={styles.subtitle}>Your orders</Text>
 
       <Text style={styles.separator} />
 
@@ -51,11 +51,11 @@ const BasketScreen = ({testReducer}) => {
           style={styles.buttonBack}
           onPress={goBack}
         >
-          <Text style={styles.buttonText}>Voltar</Text>
+          <Text style={styles.buttonText}>To go back</Text>
         </Pressable>
 
         <View style={styles.button}>
-          <Text style={styles.buttonText}>Finalizar compra</Text>
+          <Text style={styles.buttonText}>Complete purchase</Text>
         </View>
       </View>
     </View>

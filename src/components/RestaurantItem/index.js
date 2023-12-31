@@ -78,7 +78,7 @@ const RestaurantItem = ({restaurant}) => {
                   fontSize: 12,
                 }}
               >
-                Cupom de 20%
+                20% coupon
               </Text>
             </View>
           </View>

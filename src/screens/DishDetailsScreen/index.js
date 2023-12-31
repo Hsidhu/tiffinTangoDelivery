@@ -20,9 +20,9 @@ const DishDetailsScreen = () => {
   };
 
   const getTotalPrice = () => {
-    return (quantity * dish.price).toLocaleString("pt-BR", {
+    return (quantity * dish.price).toLocaleString("en-US", {
       style: "currency",
-      currency: "BRL",
+      currency: "USA",
     });
   };
 
@@ -54,7 +54,7 @@ const DishDetailsScreen = () => {
           style={styles.button}
         >
           <Text style={styles.buttonText}>
-            Adicionar  {getTotalPrice()}
+            Add  {getTotalPrice()}
           </Text>
         </Pressable>
       </View>

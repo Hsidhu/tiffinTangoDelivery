@@ -3,6 +3,9 @@ import React from 'react';
 import { Feather } from '@expo/vector-icons';
 
 export default function index({onPress}) {
+    const searchTextHandler = (text) => {
+        console.log(text)
+    }
   return (
     <View>
         <View
@@ -37,11 +40,12 @@ export default function index({onPress}) {
                     }}
                 />
                 <TextInput
-                    placeholder="O que você procura?"
+                    placeholder="What are you looking for?"
                     style={{
                         color: 'grey',
                         marginLeft: 10,
                     }}
+                    onChangeText={searchTextHandler}
                 />
             </View>
             <TouchableOpacity
@@ -55,7 +59,7 @@ export default function index({onPress}) {
                         color: 'red'
                     }}
                 >
-                    Cancelar
+                    Cancel
                 </Text>
             </TouchableOpacity> 
         </View> 
@@ -66,7 +70,7 @@ export default function index({onPress}) {
                 marginHorizontal: 15,
             }}
         >
-            Pesquisas recentes
+            Recent researches
         </Text> 
     </View>
   )
